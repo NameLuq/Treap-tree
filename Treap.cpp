@@ -116,9 +116,9 @@ class Treap
         if (node->key == val)
             return true;
 
-        if ((val > node->key) && node->left)
+        if ((val < node->key) && node->left)
             return search(node->left, val);
-        if ((val < node->key) && node->right)
+        if ((val > node->key) && node->right)
             return search(node->right, val);
 
         return false;
